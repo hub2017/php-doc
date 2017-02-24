@@ -10,3 +10,11 @@ function getRequestProtocol() {
 if(getRequestProtocol()!="https"){Header("HTTP/1.1 301 Moved Permanently");Header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);die();}
 
 ?>
+
+.htaccess
+#RewriteCond %{QUERY_STRING} ^$
+#RewriteRule ^index\.php$ / [R=301,L]
+RewriteCond %{http_host} ^xxxxxxxxxxxxx.com$ [NC]
+RewriteRule ^(.*)$ http://www.xxxxxxxxxxxxx.com/$1 [R=301,L]
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
