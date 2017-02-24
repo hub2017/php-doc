@@ -1,0 +1,12 @@
+<?php
+
+function getRequestProtocol() {
+    if(!empty($_SERVER['HTTP_X_FORWARDED_PROTO']))
+        return $_SERVER['HTTP_X_FORWARDED_PROTO'];
+    else 
+        return !empty($_SERVER['HTTPS']) ? "https" : "http";
+}
+
+if(getRequestProtocol()!="https"){Header("HTTP/1.1 301 Moved Permanently");Header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);die();}
+
+?>
