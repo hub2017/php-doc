@@ -1,0 +1,13 @@
+d<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "E:/muke/hyii2/backend/web"
+    ServerName backend.hyii2.com
+    ErrorLog "logs/dummy-host2.example.com-error.log"
+    CustomLog "logs/dummy-host2.example.com-access.log" common
+	
+		<Directory "E:/muke/hyii2/backend">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Require all granted
+</Directory>
+</VirtualHost>
