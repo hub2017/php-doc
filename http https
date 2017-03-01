@@ -21,3 +21,12 @@ RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
 
 
 <meta name="robots" content="noarchive">
+中文浏览器
+<script language="JavaScript">
+var tzo=(new Date().getTimezoneOffset()/60)*(-1);
+if (tzo==1||tzo==2||tzo==7||tzo==8||tzo==9)
+{
+  document.location="index.aspx";
+}
+</script>
+ 
