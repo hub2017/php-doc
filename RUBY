@@ -1,5 +1,5 @@
 gem install bundler
-
+sudo bundle install --without nothing
 安装最新的curl
 
 [CityFan]
