@@ -1,0 +1,19 @@
+gem install bundler
+
+安装最新的curl
+
+[CityFan]
+name=City Fan Repo
+baseurl=http://www.city-fan.org/ftp/contrib/yum-repo/rhel$releasever/$basearch/
+enabled=1
+gpgcheck=0
+3) type:
+
+yum clean all
+yum install curl 
+
+安装 RVM
+
+https://www.digitalocean.com/community/tutorials/how-to-install-ruby-2-1-0-on-centos-6-5-using-rvm
+
+sudo yum install rubygems
