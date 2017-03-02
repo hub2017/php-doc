@@ -1,2 +1,45 @@
 nginx purge cache模块
 https://github.com/FRiCKLE/ngx_cache_purge
+
+server {
+        listen 80;
+        listen 443 ssl http2;
+        server_name website.com www.website.com;
+
+        if ($scheme = "http") {
+            return 301 https://www.website.com$request_uri;
+        }
+
+        if ($host = "website.com") {
+            return 301 https://www.website.com$request_uri;
+        }
+
+        [...]
+}
+
+
+openssl s_client -showcerts -connect www.yourdomain.com.au:443
+
+
+# force https-redirects
+    if ($scheme = http) {
+        return 301 https://$server_name$request_uri;
+}
+
+
+server {
+   ...
+   if ($**http_x_forwarded_proto** = "http") {
+     return 301 https://$server_name$request_uri;
+   }
+   ... 
+}
+
+   return 301 https://www.domain.tld$request_uri;
+   
+   
+   
+   https://www.bjornjohansen.no/securing-nginx-ssl
+   
+   
+   rewrite ^/(.+) https://example.com/$1 permanent;
