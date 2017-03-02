@@ -41,7 +41,7 @@ server {
    
    https://www.bjornjohansen.no/securing-nginx-ssl
    
-   
+   rewrite ^(.*) https://74.xx.xx.xx$1 permanent;
    rewrite ^/(.+) https://example.com/$1 permanent;
    
    
