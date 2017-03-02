@@ -43,3 +43,36 @@ server {
    
    
    rewrite ^/(.+) https://example.com/$1 permanent;
+   
+   
+   Dealing with nginx 400 “The plain HTTP request was sent to HTTPS port” error
+
+
+server {
+  listen 80;
+  listen 443 default ssl;
+
+  # ssl on   - remember to comment this out
+
+}
+或者分开写 
+
+server {
+  listen 80;
+
+  // other directives...
+}
+
+server {
+  listen 443;
+
+  ssl on;
+  // SSL directives...
+
+  // other directives...
+}
+
+If HTTP and HTTPS servers are equal, a single server that handles both HTTP and HTTPS requests may be configured by deleting the directive “ssl on” and adding the ssl parameter for *:443 port
+
+
+ssl off; 
