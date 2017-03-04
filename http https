@@ -29,4 +29,9 @@ if (tzo==1||tzo==2||tzo==7||tzo==8||tzo==9)
   document.location="index.aspx";
 }
 </script>
+
+var d = new Date();
+var n = d.getTimezoneOffset();
+var timezone = n / -60;
+console.log(timezone);
  
