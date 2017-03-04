@@ -35,3 +35,7 @@ var n = d.getTimezoneOffset();
 var timezone = n / -60;
 console.log(timezone);
  
+ 
+$country_code = $_SERVER["HTTP_CF_IPCOUNTRY"]; // to access in PHP
+
+$country_code = $ENV{"HTTP_CF_IPCOUNTRY"}; # to access in Perl 
