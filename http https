@@ -39,3 +39,5 @@ console.log(timezone);
 $country_code = $_SERVER["HTTP_CF_IPCOUNTRY"]; // to access in PHP
 
 $country_code = $ENV{"HTTP_CF_IPCOUNTRY"}; # to access in Perl 
+
+http://dev.maxmind.com/geoip/legacy/codes/iso3166/
