@@ -1,0 +1,36 @@
+http://www.jianshu.com/p/a4d13ba26107
+
+https://www.google.com.hk/complete/search?client=serp&hl=en-HK&gs_rn=64&gs_ri=serp&pq=bags&cp=5&gs_id=8&q=bags%20&xhr=t
+
+
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+
+req = urllib2.Request(url)
+req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+response = urllib2.urlopen(req)
+++++++++++++++++
+
+import urllib.request
+req = urllib.request.Request(url="http://localhost/",data=b'None',headers={'User-Agent':' Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0'})
+handler = urllib.request.urlopen(req)
+
+import pycurl
+c= pycurl.Curl()
+c.setopt(c.URL, 'http://www.google.co.uk/search?hl=en&q=hello')
+c.perform()
+
+yum install libcurl-devel
+
+from StringIO import StringIO    
+import pycurl
+
+url = 'http://www.google.com/'
+
+storage = StringIO()
+c = pycurl.Curl()
+c.setopt(c.URL, url)
+c.setopt(c.WRITEFUNCTION, storage.write)
+c.perform()
+c.close()
+content = storage.getvalue()
+print content
