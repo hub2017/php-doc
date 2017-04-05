@@ -1,0 +1,67 @@
+file = open('/etc/passwd', 'r')
+
+for line in file:
+    print line,
+    print "----------------"
+    
+ 
+ re 模块
+ 
+ .
+ []
+ [^]
+ 贪婪模式  非贪婪模式
+ + 1    ||||||||||||| +?
+ ?  0 1    ??
+ *  *?
+ {m}   {m}?
+ {m,n}   {m,n}?
+ {0,n}
+ 
+ ^
+ $
+ 
+ \b
+ |
+ () 分组  及 引用  \nn
+ 
+ [0-9] \d
+ d  数字  十进制
+ \w [0-9a-zA-Z] 
+ \W [^0-9a-zA-Z]
+ 
+ \s  任意空白字符 [\n\r\t\f\v]
+ \S
+ 
+ 字面量
+ 
+ 
+ In [78]: re.
+           re.compile     re.error       re.I           re.M           re.S           re.sre_compile re.sys         re.U           
+           re.copy_reg    re.escape      re.IGNORECASE  re.match       re.Scanner     re.sre_parse   re.T           re.UNICODE     
+           re.DEBUG       re.findall     re.L           re.MULTILINE   re.search      re.sub         re.template    re.VERBOSE     
+           re.DOTALL      re.finditer    re.LOCALE      re.purge       re.split       re.subn        re.TEMPLATE    re.X     
+ 
+ re 对象  ----》  match 对象 ----》》》match 方法
+ offset
+ flags
+ 
+re.compile('pattn') 模式对象  re.compile(r'a') 其中 r 表示 正则的意思
+
+ match 方法
+ ]: match.end
+                match.end       match.group     match.lastgroup match.re        match.start     
+                match.endpos    match.groupdict match.lastindex match.regs      match.string    
+                match.expand    match.groups    match.pos       match.span                      
+
+ 
+ match.string
+ match.re
+ match.group
+ 
+ match.pos 从那个位置开始搜索
+ match.endpos  从那个位置搜索结束
+ match.start   
+ match.end
+ 
+ 
